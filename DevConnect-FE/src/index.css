@@ -1,0 +1,56 @@
+
+
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+html, body {
+  margin: 0;    /* Remove default margin */
+  padding: 0;   /* Remove default padding */
+  width: 100%;  /* Ensure body takes full width */
+   height: 100%; /*Optional: ensure body takes full height */
+   overflow-x: hidden; 
+   /* Optional: prevent horizontal scrolling*/
+   background-color: white; 
+
+
+
+} 
+
+*, *:hover{
+  scrollbar-color: initial;
+}
+
+/* Targets the scrollbar track (background) */
+::-webkit-scrollbar {
+  width: 7px !important;      
+  height: 12px !important;
+     
+}
+
+/* Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1 !important; 
+}
+
+/* Handle (scrolling thumb) */
+::-webkit-scrollbar-thumb {
+  background: #888 !important;   
+  border-radius: 6px !important;  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555 !important;  
+}
+/* span::hover{
+
+} */
+
+button{
+  background-color: red ;
+}
+
+
+
