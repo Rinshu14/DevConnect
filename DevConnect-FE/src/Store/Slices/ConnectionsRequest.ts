@@ -8,56 +8,29 @@ const ConnectionRequest = createSlice({
     reducers: {},
 
 
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
     extraReducers: (builder) => {
-        builder.addCase(fetchConnectionRequest.pending, (state, action) => {
-            console.log("in pending")
-        })
-        builder.addCase(fetchConnectionRequest.fulfilled, (state, action: PayloadAction<ConnectionRequestType[]>) => {
+        // builder.addCase(fetchConnectionRequest.pending, (state, action) => {
+        //     console.log("in pending")
+        // })
+        builder.addCase(fetchConnectionRequest.fulfilled, (_, action: PayloadAction<ConnectionRequestType[]>) => {
 
 
             return action.payload
         })
-        builder.addCase(fetchConnectionRequest.rejected, (state, action) => {
-            console.log("in rejected ")
-        })
-        builder.addCase(reviewConnectionRequest.pending, (state, action) => {
-            console.log("pending ")
-        })
-        builder.addCase(reviewConnectionRequest.fulfilled, (state, action ) => {
-      
+        // builder.addCase(fetchConnectionRequest.rejected, (state, action) => {
+        //     console.log("in rejected ")
+        // })
+        // builder.addCase(reviewConnectionRequest.pending, (state, action) => {
+        //     console.log("pending ")
+        // })
+        builder.addCase(reviewConnectionRequest.fulfilled, (state, action) => {
+
             return state.filter((item) => item._id !== action.payload.data._id)
-    
+
         })
-        builder.addCase(reviewConnectionRequest.rejected, (state, action) => {
-            console.log("in rejected ")
-        })
+        // builder.addCase(reviewConnectionRequest.rejected, (state, action) => {
+        //     console.log("in rejected ")
+        // })
     }
 
 

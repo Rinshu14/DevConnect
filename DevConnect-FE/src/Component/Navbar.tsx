@@ -18,7 +18,7 @@ const Navbar = () => {
   const isLoggedIn = UseAppSelector((state) => state.User.isLoggedIn)
   const user = UseAppSelector((state) => state.User.user)
   const [theme, setTheme] = useState(user?.theme)
-  const [dropDownVisible, setDropDownVisible] = useState(false)
+  //const [dropDownVisible, setDropDownVisible] = useState(false)
 
 
   const navigate = useNavigate()

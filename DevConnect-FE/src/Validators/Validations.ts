@@ -1,5 +1,5 @@
 import validator from 'validator'
-import { appGenderEnum } from "../Utils/ApplicationConstants"
+//import { appGenderEnum } from "../Utils/ApplicationConstants"
 
 const emailValidator = (email: string) => {
     return validator.isEmail(email)

@@ -4,7 +4,7 @@ import { getFeed } from "../../Services/FeedAsync"
 import { reviewUser } from "../../Services/RequestsAsync";
 // import { FeedUser } from "../../Types/User";
 import { OtherUser } from "../../Types/CommonTypes";
-import { stat } from "fs";
+
 
 interface Feed {
     //feed: FeedUser[]
@@ -42,15 +42,15 @@ let FeedSlice = createSlice({
             state.error = ""
         state.hasMoreData=(action.payload.data.length>0)? true:false
         })
-        builder.addCase(reviewUser.pending, (_, action: any) => {
-            console.log("in pending")
-        })
+        // builder.addCase(reviewUser.pending, (_, action: any) => {
+        //     console.log("in pending")
+        // })
         builder.addCase(reviewUser.fulfilled, (state: any, action: PayloadAction<string>) => {
             state.feed = state.feed.filter((item: OtherUser) => item._id !== action.payload)
         })
-        builder.addCase(reviewUser.rejected, (state:any, action: any) => {
-            console.log("in rejected")
-        })
+        // builder.addCase(reviewUser.rejected, (state:any, action: any) => {
+        //     console.log("in rejected")
+        // })
 
     }
 

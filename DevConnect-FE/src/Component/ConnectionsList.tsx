@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 import UseAppDispatch from '../Hooks/UseAppDispatch'
 import UseAppSelector from '../Hooks/UseAppSelector'
 import ConnectionCard from './ConnectionCard'
-
 import { fetchConnections } from "../Services/ConnectionAsync"
 
 const ConnectionsList = () => {

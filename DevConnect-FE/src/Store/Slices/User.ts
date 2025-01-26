@@ -16,10 +16,10 @@ export const UserSlice = createSlice({
     name: "User",
     initialState: {} as UserState,
     reducers: {
-        setUser: (state: UserState, action: PayloadAction<{ name: string, lastName: string }>) => {
-            console.log(action.payload)
+        // setUser: (state: UserState, action: PayloadAction<{ name: string, lastName: string }>) => {
+        //     console.log(action.payload)
 
-        },
+        // },
 
     },
     extraReducers: (builder) => {
@@ -77,17 +77,15 @@ export const UserSlice = createSlice({
 
             state.isLoggedIn = false
         })
-        builder.addCase(logoutRequest.rejected, (state) => {
+        builder.addCase(logoutRequest.rejected, () => {
 
         })
-        builder.addCase(profileUpdate.pending, (state,) => {
-            console.log("in pending")
-        })
+       
         builder.addCase(profileUpdate.fulfilled, (state, action: PayloadAction<{ data: User, message: string }>) => {
             state.user = action.payload.data
 
         })
-        builder.addCase(profileUpdate.rejected, (state, action) => {
+        builder.addCase(profileUpdate.rejected, ( action) => {
             console.log(action)
             console.log("in rejected")
         })
@@ -95,6 +93,6 @@ export const UserSlice = createSlice({
 
 
 })
-export const { setUser, } = UserSlice.actions
+//export const {  } = UserSlice.actions
 export default UserSlice.reducer
 
