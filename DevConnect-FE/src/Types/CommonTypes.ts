@@ -45,3 +45,17 @@ export type BaseToastType = {
     type: ToastType
 }
 
+// let obj = {
+//     sender: item.senderId.firstName,
+//     message: item.message,
+//     time: time,
+//     _id: item._id
+// }
+
+export interface ChatMessageType {
+    senderId: string,
+    message: string,
+    time: string,
+    _id: string
+}
+

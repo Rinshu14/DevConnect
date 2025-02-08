@@ -10,7 +10,7 @@ export const fetchConnectionRequest = createAsyncThunk("connectionRequest/fecthP
     try {
         let res = await axios.get(`${import.meta.env.VITE_BASEAPIURL}${import.meta.env.VITE_FETCHPENDINGURL}`, { withCredentials: true })
         
-        console.log(res.data.data)
+        // console.log(res.data.data)
         return res.data.data
     }
     catch (err:any ) {

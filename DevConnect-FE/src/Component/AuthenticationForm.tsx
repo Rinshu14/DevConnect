@@ -4,16 +4,16 @@ import { useRef, useState } from "react"
 import InputBox from "../CustomComponents/InputBox"
 import Button from "../CustomComponents/Button"
 import { emailValidator, passwordValidator, usernameValidator, ageValidator } from "../Validators/Validations"
-import { login, signUp,AuthenticationFormLoginText, AuthenticationFormSignUpText } from "../Utils/ApplicationConstants"
+import { login, signUp, AuthenticationFormLoginText, AuthenticationFormSignUpText } from "../Utils/ApplicationConstants"
 import { useNavigate } from "react-router-dom"
 import { AuthenticationFormTypes } from "../Types/Enums"
 import { genderEnum } from "../Types/Enums"
 
 
-
 type AuthenticationFormProps = {
   formType: AuthenticationFormTypes
 }
+
 
 const AuthenticationForm = ({ formType }: AuthenticationFormProps) => {
 
@@ -44,9 +44,9 @@ const AuthenticationForm = ({ formType }: AuthenticationFormProps) => {
     }
     else {
       if (emailRef.current && passwordRef.current && firstNameRef.current && ageRef.current && genderRef.current) {
-        if (emailValidator(emailRef.current.value) && passwordValidator(passwordRef.current.value) && ageValidator(ageRef.current.value) && usernameValidator(firstNameRef.current.value) ) {
+        if (emailValidator(emailRef.current.value) && passwordValidator(passwordRef.current.value) && ageValidator(ageRef.current.value) && usernameValidator(firstNameRef.current.value)) {
           setErrorData("")
-          dispatch(signupRequest({ emailId: emailRef.current.value, password: passwordRef.current.value, age: parseInt(ageRef.current.value), firstName: firstNameRef.current.value, gender: genderRef.current.value.toLocaleLowerCase() as genderEnum}))
+          dispatch(signupRequest({ emailId: emailRef.current.value, password: passwordRef.current.value, age: parseInt(ageRef.current.value), firstName: firstNameRef.current.value, gender: genderRef.current.value.toLocaleLowerCase() as genderEnum }))
         }
         else {
           setErrorData("Invalid Details")

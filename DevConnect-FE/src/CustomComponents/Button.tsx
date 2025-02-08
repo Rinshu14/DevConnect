@@ -7,7 +7,7 @@ interface ButtonProps  extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button =forwardRef<HTMLButtonElement,ButtonProps> (({text,category,...props},ref) => {
   return (
-    <button ref={ref} {...props}  className={clsx("btn",(category=="primary")?"btn-primary":"btn-secondary")} >{text}</button>
+    <button ref={ref} {...props}  className={clsx("btn",(category=="primary")?"btn-primary":"btn-secondary")}   >{text}</button>
     
 
   )

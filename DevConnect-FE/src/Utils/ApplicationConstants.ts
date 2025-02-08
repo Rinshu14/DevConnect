@@ -15,6 +15,8 @@ export const Connections = "Connections"
 export const ConnectionRequest = "Connection Request"
 export const keyForThemeInLocalStorage = "devConnect_Theme"
 
+export const Chat="Ping Me"
+
 export const AuthenticationFormLoginText="New User? "
 export const AuthenticationFormSignUpText="Already have an acount ? "
 

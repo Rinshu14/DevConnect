@@ -20,7 +20,7 @@ const Profile = () => {
 
   const [firstName, setFirstName] = useState<string>(user.firstName)
   const [lastName, setLastName] = useState<string>(user.lastName)
-  const [age, setAge] = useState<number>(user.age ?? "")
+  const [age, setAge] = useState<number>(user.age ?? 0)
   const [photoUrl, setPhotoUrl] = useState<string>(user.photoUrl ?? "")
   const [gender, setGender] = useState<genderEnum>(user.gender)
   const [about, setAbout] = useState<string>(user.about ?? "")
@@ -40,9 +40,10 @@ const Profile = () => {
     }
   }
 
-  const handleAgeChange = (value: number | string) => {
-    if (typeof value === 'number') {
-      setAge(value)
+  const handleAgeChange = (value: string ) => {
+    
+    if (typeof  Number.parseInt(value) === 'number') {
+      setAge(Number.parseInt(value))
     }
   }
 

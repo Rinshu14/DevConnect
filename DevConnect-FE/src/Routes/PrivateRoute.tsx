@@ -6,6 +6,7 @@ import ErrorElement from '../Component/ErrorElement'
 import Profile from '../Component/Profile'
 import ConnectionRequestList from '../Component/ConnectionRequestList'
 import ConnectionsList from '../Component/ConnectionsList'
+import Chat from "../Component/Chat"
 
 
 const PrivateRoute = () => {
@@ -30,6 +31,10 @@ const PrivateRoute = () => {
       {
         path:"/connectionRequest",
         element:<ConnectionRequestList/>
+      },
+       {
+        path:"/chat/:userId",
+        element:<Chat/>
       },
       {
         path: "*",

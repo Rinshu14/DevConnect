@@ -26,7 +26,8 @@ const InputBox = forwardRef<HTMLInputElement, InputBoxProps>(({ placeholder, typ
     }
 
     return (
-        <input type={type} placeholder={placeholder} ref={ref} {...props} onChange={(e: ChangeEvent<HTMLInputElement>) => { handleChange(e) }} className={`input input-bordered w-full max-w-xs  ${error ? "input-error" : ""} ${styles}`} style={{ outline: "none" }} />
+        // <input type={type} placeholder={placeholder} ref={ref} {...props} onChange={(e: ChangeEvent<HTMLInputElement>) => { handleChange(e) }} className={`input input-bordered w-full max-w-xs  ${error ? "input-error" : ""} ${styles}`} style={{ outline: "none" }} />
+        <input type={type} placeholder={placeholder} ref={ref} {...props} onChange={(e: ChangeEvent<HTMLInputElement>) => { handleChange(e) }} className={`input input-bordered w-full  ${error ? "input-error" : ""} ${styles}`} style={{ outline: "none" }} />
     )
 })
 

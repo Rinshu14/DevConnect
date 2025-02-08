@@ -1,0 +1,22 @@
+.chat-bubble-light{
+    background-color: rgb(255, 255, 255);
+    color: rgb(47, 46, 46);
+}
+.chat-bubble-dark{
+
+}
+.hr-light{
+
+height: 1.5px;
+
+background-color: black ;
+
+}
+.hr-dark{
+
+height: 1.5px;
+
+background-color: rgb(55, 53, 53) !important;
+
+/* opacity: 1; */
+}
