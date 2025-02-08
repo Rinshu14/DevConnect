@@ -40,11 +40,15 @@ const Profile = () => {
     }
   }
 
-  const handleAgeChange = (value: string ) => {
-    
-    if (typeof  Number.parseInt(value) === 'number') {
+  const handleAgeChange = (value: string | number) => {
+
+
+    if (typeof value == "string") {
       setAge(Number.parseInt(value))
     }
+   else{
+    setAge(value)
+   }
   }
 
   const handleFileChange = (e: any) => {
@@ -52,10 +56,10 @@ const Profile = () => {
     console.log(e.target.files[0])
     if (e.target.files[0].size > 2097152) {
 
-     toastManager.addToast({ message: "File size should be less than 2MB", type: ToastType.warning })
-      return; 
+      toastManager.addToast({ message: "File size should be less than 2MB", type: ToastType.warning })
+      return;
     }
-    if(! e.target.files[0].type.includes("image")) {
+    if (!e.target.files[0].type.includes("image")) {
       toastManager.addToast({ message: "Please choose a image file", type: ToastType.warning })
       return;
     }
@@ -83,7 +87,7 @@ const Profile = () => {
     let form = new FormData()
     form.append("theme", theme)
     form.append("firstName", firstName)
-    form.append("lastName", (lastName)?lastName:"")
+    form.append("lastName", (lastName) ? lastName : "")
     form.append("about", about)
     form.append("gender", gender.toString())
     form.append("age", age.toString())
