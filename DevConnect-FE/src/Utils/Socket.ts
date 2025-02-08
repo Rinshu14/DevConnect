@@ -8,7 +8,8 @@ class SocketClass {
 
     private constructor() {
         SocketClass.instance = this;
-        this.socket = io("http://localhost:3000");
+        if(location.hostname="localhost")this.socket = io("http://localhost:3000");
+        else this.socket = io("/api/socket.io");
     }
 
 
