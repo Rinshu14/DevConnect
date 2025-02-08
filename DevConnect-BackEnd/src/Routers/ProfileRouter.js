@@ -14,10 +14,10 @@ router.get("/view", UserAuth, async (req, res) => {
     try {
 
 
-        let { firstName, lastName, gender, age, skills, theme, emailId, photoUrl, about } = req.User
-        let userId = req.User._id
+        let { firstName, lastName, gender, age, skills, theme, emailId, photoUrl, about,_id } = req.User
+       // let _id = req.User._id
 
-        res.status(200).json(new APIResponse(200, { firstName, lastName, gender, age, skills, theme, emailId, photoUrl, userId, about }, "User data fetched sucessfully"))
+        res.status(200).json(new APIResponse(200, { firstName, lastName, gender, age, skills, theme, emailId, photoUrl, _id, about }, "User data fetched sucessfully"))
         //  res.json({ data: { firstName, lastName, gender, age, skills, theme, emailId, photoUrl, userId, about }, message: "success" })
     }
     catch(error)

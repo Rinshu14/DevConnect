@@ -60,7 +60,7 @@ router.post("/login", async (req, res) => {
             gender: user.gender,
             age: user.age,
             skills: user.skills,
-            userId: user._id.toString(),
+           _id: user._id.toString(),
             theme: user.theme,
             about: user?.about
         }
